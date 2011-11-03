@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/cweb
+# catalog-date 2008-08-18 10:38:42 +0200
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-cweb-latex
 Version:	20080818
 Release:	1
@@ -118,6 +124,7 @@ with CWEB, edited to run with LaTeX.
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/src/test/vbar.w
 #- source
 %doc %{_texmfdistdir}/source/latex/cweb-latex/Makefile
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -128,3 +135,5 @@ with CWEB, edited to run with LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
