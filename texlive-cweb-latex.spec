@@ -125,3 +125,17 @@ with CWEB, edited to run with LaTeX.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080818-2
++ Revision: 750758
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080818-1
++ Revision: 718195
+- texlive-cweb-latex
+- texlive-cweb-latex
+- texlive-cweb-latex
+- texlive-cweb-latex
+
