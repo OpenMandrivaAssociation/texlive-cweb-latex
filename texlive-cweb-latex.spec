@@ -1,19 +1,19 @@
-# revision 15878
+# revision 28878
+
 # category Package
 # catalog-ctan /macros/latex/contrib/cweb
-# catalog-date 2008-08-18 10:38:42 +0200
+# catalog-date 2013-01-19 01:25:39 +0100
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-cweb-latex
-Version:	20080818
-Release:	2
+Version:	20130119
+Release:	1
 Summary:	A LaTeX version of CWEB
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cweb
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -36,14 +36,15 @@ with CWEB, edited to run with LaTeX.
 %files
 %{_texmfdistdir}/tex/latex/cweb-latex/cwbl-german.sty
 %{_texmfdistdir}/tex/latex/cweb-latex/cweb.cls
-%{_texmfdistdir}/tex/latex/cweb-latex/cweb.cls.patch
 %{_texmfdistdir}/tex/latex/cweb-latex/cwebarray.sty
+%{_texmfdistdir}/tex/latex/cweb-latex/cwebbase.tex
 %{_texmfdistdir}/tex/latex/cweb-latex/keyvald.sty
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/CATALOG
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/History
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/INSTALL
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/License
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/MANIFEST
+%doc %{_texmfdistdir}/doc/latex/cweb-latex/Makefile
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/README
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/contrib/Index
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/contrib/cwbl-deutsch.sty
@@ -56,7 +57,6 @@ with CWEB, edited to run with LaTeX.
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/contrib/wagner/cwebzw.sty
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/cweb-conf.pdf
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/cweb-user.pdf
-%doc %{_texmfdistdir}/doc/latex/cweb-latex/cwebbase.tex
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/examples/Makefile
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/examples/compare/wcltx.aux
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/examples/compare/wcltx.bbl
@@ -113,29 +113,13 @@ with CWEB, edited to run with LaTeX.
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/src/test/titlepage.w
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/src/test/token.w
 %doc %{_texmfdistdir}/doc/latex/cweb-latex/src/test/vbar.w
-#- source
-%doc %{_texmfdistdir}/source/latex/cweb-latex/Makefile
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080818-2
-+ Revision: 750758
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080818-1
-+ Revision: 718195
-- texlive-cweb-latex
-- texlive-cweb-latex
-- texlive-cweb-latex
-- texlive-cweb-latex
-
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
