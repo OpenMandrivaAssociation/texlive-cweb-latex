@@ -6,7 +6,7 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-cweb-latex
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	A LaTeX version of CWEB
 Group:		Publishing
