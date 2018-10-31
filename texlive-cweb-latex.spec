@@ -7,7 +7,7 @@
 # catalog-version undef
 Name:		texlive-cweb-latex
 Version:	20180303
-Release:	1
+Release:	2
 Summary:	A LaTeX version of CWEB
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cweb
