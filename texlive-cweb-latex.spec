@@ -1,19 +1,12 @@
-# revision 28878
-
-# category Package
-# catalog-ctan /macros/latex/contrib/cweb
-# catalog-date 2013-01-19 01:25:39 +0100
-# catalog-license gpl
-# catalog-version undef
 Name:		texlive-cweb-latex
-Version:	20190228
+Version:	28878
 Release:	1
 Summary:	A LaTeX version of CWEB
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cweb
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +18,12 @@ distribution includes the "Counting Words" program distributed
 with CWEB, edited to run with LaTeX.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -116,7 +109,7 @@ with CWEB, edited to run with LaTeX.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
