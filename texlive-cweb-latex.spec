@@ -3,7 +3,7 @@ Version:	28878
 Release:	2
 Summary:	A LaTeX version of CWEB
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/cweb
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/cweb
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cweb-latex.doc.r%{version}.tar.xz
